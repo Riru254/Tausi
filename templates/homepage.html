@@ -29,7 +29,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
             <img src="../static/media/logo-removebg.png" alt="Logo" width="40"> Tausi Travels and Tours
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -58,8 +58,8 @@
             <h2 class="mb-4 text-success">Plan Your Adventure</h2>
             <p class="lead">Book your next escape with Tausi Travels. Fast, easy, and tailored for you.</p>
             
-            <a href="packages.html" class="btn text-white" style="background-color: #28a745;">Check out packages</a>
-            <a href="booking.html" class="btn text-white" style="background-color: #28a745;">Make a Booking</a>
+            <a href="{{ url_for('packages') }}" class="btn text-white" style="background-color: #28a745;">Check out packages</a>
+            <a href="{{ url_for('booking') }}" class="btn text-white" style="background-color: #28a745;">Make a Booking</a>
         </div>
     </section>
 
