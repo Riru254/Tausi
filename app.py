@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, flash
+from flask import Flask, request, render_template, redirect, flash, url_for
 #from pymongo import MongoClient
 import os
 
@@ -31,9 +31,18 @@ def homepage():
 def contact():
     return render_template('contact.html')
 
-@app.route('/booking')
+@app.route('/booking', methods=['GET', 'POST'])
 def booking():
+    if request.method == 'POST':
+        # process form data here (optional: save to DB)
+
+        # after saving, redirect to confirmation
+        return redirect(url_for('confirmation'))
     return render_template('booking.html')
+
+@app.route('/confirmation')
+def confirmation():
+    return render_template('confirmation.html')
 
 
 if __name__ == '__main__':
