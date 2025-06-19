@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active " href="{{ url_for('index') }}">Home</a>
+                    <a class="nav-link active " href="{{ url_for('homepage') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('about') }}">About</a>
@@ -70,11 +70,11 @@
                 <!-- Blog Post 1 -->
                 <div class="col-md-4">
                   <div class="card h-100 shadow-sm">
-                    <img src="blog1.jpg" class="card-img-top" alt="Blog Post">
                     <div class="card-body">
                       <h5 class="card-title">Top 5 Luxury Safari Lodges</h5>
                       <p class="card-text">Discover Kenya’s most exclusive safari experiences with world-class amenities.</p>
-                      <a href="blog-post.html" class="btn btn-sm text-white" style="background-color: #20c997;">Read More</a>
+                      <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</button>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -82,11 +82,11 @@
       <!-- Blog Post 2 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="blog2.jpg" class="card-img-top" alt="Blog Post">
+          <img src="../static/media/blog2.jpg" class="card-img-top" alt="Blog Post">
           <div class="card-body">
             <h5 class="card-title">Packing for the Coast</h5>
             <p class="card-text">What to bring for a perfect coastal getaway in Diani or Watamu.</p>
-            <a href="blog-post.html" class="btn btn-sm text-white" style="background-color: #20c997;">Read More</a>
+            <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</button>
           </div>
         </div>
       </div>
@@ -94,11 +94,11 @@
       <!-- Blog Post 3 -->
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
-          <img src="blog3.jpg" class="card-img-top" alt="Blog Post">
+          <img src="../static/media/logo-removebg.png" class="card-img-top" alt="Blog Post">
           <div class="card-body">
             <h5 class="card-title">Why Travel with Tausi?</h5>
             <p class="card-text">We blend luxury, culture, and comfort to create truly unforgettable journeys.</p>
-            <a href="blog-post.html" class="btn btn-sm text-white" style="background-color: #20c997;">Read More</a>
+            <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</button>
           </div>
         </div>
       </div>
@@ -106,6 +106,114 @@
     </div>
   </div>
 </section>
+<!-- Modal for Blog 1 -->
+<div class="modal fade" id="blogModal1" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Top 5 Luxury Safari Lodges in Kenya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="blog1.jpg" class="img-fluid mb-3" alt="">
+        <p>
+          <strong>1. Mara Bushtops – Maasai Mara</strong> <br>
+          Perched on a private conservancy bordering the Maasai Mara, Mara Bushtops is the epitome of bush luxury. Each tented suite features a private hot tub, 24-hour butler service, and sweeping views of the savannah. Guests enjoy gourmet dining, spa treatments, and front-row seats to the Great Migration. <br>
+                  
+          <strong>2. Elsa’s Kopje – Meru National Park</strong> <br>
+          Built into the rugged Mughwango Hill, Elsa’s Kopje is a romantic hideaway named after the lioness from Born Free. With panoramic views of Meru National Park, this award-winning lodge offers open-air stone cottages, exceptional guiding, and a deep connection to Kenya’s conservation legacy.
+                  <br>
+          <strong>3. Saruni Samburu – Kalama Conservancy</strong> <br>
+          Set atop a rocky outcrop with jaw-dropping views of northern Kenya, Saruni Samburu blends Italian design with African soul. The eco-chic villas are open to the elements, offering a seamless connection to nature. Expect intimate wildlife encounters, cultural immersion with the Samburu people, and stargazing like nowhere else.
+                  <br>
+          <strong>4. Angama Mara – Maasai Mara</strong> <br>
+          Suspended on the edge of the Oloololo Escarpment, Angama Mara delivers cinematic views and unmatched elegance. Inspired by Out of Africa, the lodge features glass-fronted suites, a curated library, and a private airstrip. Guests can enjoy hot air balloon rides, bush picnics, and exclusive access to the Mara Triangle.
+                  <br>
+          <strong>5. Tortilis Camp – Amboseli National Park</strong> <br>
+          With Mount Kilimanjaro as its backdrop, Tortilis Camp offers a front-row seat to Amboseli’s famed elephant herds. The camp’s thatched tents, organic gardens, and solar-powered design make it both luxurious and sustainable. It’s a haven for photographers, nature lovers, and anyone seeking serenity beneath Africa’s highest peak.
+                  <br>
+          Whether you're planning a honeymoon, a milestone celebration, or simply a once-in-a-lifetime journey, these lodges promise unforgettable experiences in the heart of the wild.
+                  
 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Blog 2 -->
+<div class="modal fade" id="blogModal2" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Packing for the Coast: What to Bring for a Perfect Getaway in Diani or Watamu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="blog1.jpg" class="img-fluid mb-3" alt="">
+        <p>
+          Kenya’s coastline is a dreamy blend of turquoise waters, powdery white sands, and Swahili charm. Whether you're heading to the laid-back shores of Watamu or the vibrant beaches of Diani, packing smart can make all the difference between a good trip and a great one. Here’s your ultimate guide to what to bring for a flawless coastal escape. <br>
+          <strong>👗 Clothing: Light, Breezy & Beach-Read</strong> <br>
+          - Swimwear – Pack at least two so you always have a dry one. <br>
+          - Lightweight clothing – Think cotton dresses, linen shirts, and loose shorts.<br>
+          - Cover-ups & sarongs – Perfect for beach-to-lunch transitions.<br>
+          - Evening wear – A casual maxi dress or linen trousers for seaside dinners.<br>
+          - Flip-flops & sandals – Easy to slip on and off for beach strolls.<br>
+          - Sun hat & sunglasses – Essential for sun protection and style.<br>
+          <strong>🧴 Essentials for the Tropical Climate</strong> <br>
+          - Sunscreen (reef-safe) – The coastal sun is strong, so SPF 30+ is a must. <br>
+          - Insect repellent – Especially important in the evenings. <br>
+          - After-sun lotion or aloe vera – For soothing sun-kissed skin. <br>
+          - Reusable water bottle – Stay hydrated in the heat. <br>
+          - Beach bag – Big enough for towels, snacks, and your novel of choice. <br>
+          <strong>📸 Tech & Travel Gear</strong> <br>
+          - Phone & waterproof case – For those Insta-worthy beach shots. <br>
+          - Power bank – Keep your devices charged during long beach days. <br>
+          - Snorkeling gear – Optional, but great if you want to explore coral reefs on your own. <br>
+          - Dry bag – Protects your valuables during boat rides or dhow cruises. <br>
+          <strong>🧘🏽‍♀️ Extras for Comfort & Culture</strong> <br>
+          - Light shawl or kikoy – Great for modesty when visiting local villages or mosques. <br>
+          - Travel-size toiletries – Many coastal lodges are eco-conscious, so bring biodegradable options. <br>
+          - Books or e-reader – Nothing beats reading with the sound of waves in the background. <br>
+          - Cash in small denominations – For tipping, tuk-tuks, or local markets. <br>
+          <br>
+                With this checklist, you’ll be ready to soak up the sun, dive into the Indian Ocean, and embrace the coastal rhythm of Diani or Watamu. Want a printable version or a downloadable checklist for your readers? I can whip one up! 🌴🌊  
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for Blog 3 -->
+<div class="modal fade" id="blogModal2" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Top 5 Luxury Safari Lodges</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="blog1.jpg" class="img-fluid mb-3" alt="">
+        <p>
+          <strong>Why You Should Travel with Tausi: Comfort, Care & Unforgettable Journeys</strong> <br>
+          When it comes to travel, the journey should be just as memorable as the destination. That’s where Tausi steps in—not just as a transport provider, but as a trusted partner in creating seamless, comfortable, and enriching travel experiences across East Africa.
+          <br>
+          <strong>🚌 1. Travel in Comfort and Style</strong> <br>
+          Tausi is redefining what it means to travel by road. Whether you're heading to the coast, the savannah, or the city, Tausi’s fleet of modern, well-maintained coaches and vehicles ensures a smooth, spacious, and air-conditioned ride every time. Say goodbye to cramped seats and hello to reclining comfort, onboard entertainment, and thoughtful amenities.
+          <br>
+          <strong>🌍 2. Local Expertise, Global Standards</strong> <br>
+          With deep roots in the region and a passion for hospitality, Tausi blends local knowledge with international service standards. Their team of professional drivers and guides are not only skilled but also deeply familiar with the landscapes, cultures, and hidden gems that make every journey special.
+          <br>
+          <strong>💼 3. Tailored Experiences for Every Traveler</strong> <br>
+          Whether you're a solo explorer, a family on holiday, or a group of friends chasing adventure, Tausi offers customizable travel packages that suit your pace and preferences. From curated safaris to coastal getaways, every itinerary is designed to maximize comfort, discovery, and joy.
+          <br>
+          <strong>🛡️ 4. Safety First, Always</strong> <br>
+          Tausi prioritizes your well-being with rigorous safety protocols, reliable vehicles, and 24/7 support. You can travel with peace of mind knowing that every detail—from route planning to vehicle maintenance—is handled with care.
+          <br>
+          <strong>🌟 5. More Than a Ride—It’s a Relationship</strong> <br>
+          What sets Tausi apart is their commitment to building trust and lasting memories. From the moment you book to the final farewell, you’re treated not just as a passenger, but as part of the Tausi family. It’s this personal touch that keeps travelers coming back, trip after trip.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
