@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flask-app
+    env: python
+    branch: main
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    autoDeploy: true
+    healthCheckPath: /
+    plan: free
