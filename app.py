@@ -31,10 +31,10 @@ def homepage():
 def contact():
     return render_template('contact.html')
 
-@app.route('/booking', methods=['GET', 'POST'])
+@app.route('/booking')
 def booking():
-    # When User Submits Form
-    pass
+    return render_template('booking.html')
+
 
 if __name__ == '__main__':
     app.run(debug=False)
