@@ -15,10 +15,6 @@ def home():
     return render_template('welcome.html')
 
 
-@app.route('/welcome')
-def index():
-    return render_template('welcome.html')
-
 @app.route('/about')
 def about():
     return render_template('about.html')
