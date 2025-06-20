@@ -22,14 +22,22 @@
     color: white;
     text-align: center;
     font-size: 2rem;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+        }
+        .overlay-text {
+    position: relative;
+    z-index: 1;
+    color: rgb(10, 74, 48);
+    text-align: center;
+    font-size: 1rem;
+    backdrop-filter: blur(5px);
 }
       </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ url_for('index') }}">
+        <a class="navbar-brand" href="{{ url_for('homepage') }}">
             <img src="../static/media/logo-removebg.png" alt="Logo" width="40"> Tausi Travels and Tours
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -66,46 +74,87 @@
     <section class="py-5 bg-white">
         <div class="container ">
             <h2 class="mb-4 text-center text-teal">Latest from Our Blog</h2>
-            <div class="row g-4">
-                <!-- Blog Post 1 -->
-                <div class="col-md-4">
-                  <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                      <h5 class="card-title">Top 5 Luxury Safari Lodges</h5>
-                      <p class="card-text">Discover Kenya’s most exclusive safari experiences with world-class amenities.</p>
-                      <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</button>
-                    </div>
-                    </div>
+            <div class="row">
+              <!-- Blog Post 1 -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <img src="../static/media/blog1.jpg" class="card-img-top" alt="Blog Post">
+                  <div class="card-body">
+                    <h5 class="card-title">Top 5 Luxury Safari Lodges</h5>
+                    <p class="card-text">Discover Kenya’s most exclusive safari experiences with world-class amenities.</p>
+                    <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</button>
                   </div>
                 </div>
+              </div>
+            
+              <!-- Blog Post 2 -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <img src="../static/media/blog2.jpg" class="card-img-top" alt="Blog Post">
+                  <div class="card-body">
+                    <h5 class="card-title">Packing for the Coast</h5>
+                    <p class="card-text">What to bring for a perfect coastal getaway in Diani or Watamu.</p>
+                    <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</button>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Blog Post 3 -->
+              <div class="col-12 col-sm-6 col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <img src="../static/media/logo-removebg.png" class="card-img-top" alt="Blog Post">
+                  <div class="card-body">
+                    <h5 class="card-title">Why Travel with Tausi?</h5>
+                    <p class="card-text">We blend luxury, culture, and comfort to create truly unforgettable journeys.</p>
+                    <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <!-- Blog Post 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="../static/media/blog2.jpg" class="card-img-top" alt="Blog Post">
-          <div class="card-body">
-            <h5 class="card-title">Packing for the Coast</h5>
-            <p class="card-text">What to bring for a perfect coastal getaway in Diani or Watamu.</p>
-            <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</button>
+        </div>
+    </section>
+
+
+    <footer class="bg-abstract text-white mt-5"  >
+      <div class="container-fluid py-4 overlay-text">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Tausi Travels</h5>
+            <p>Luxury. Culture. Adventure.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="{{ url_for('homepage') }}" class="text-white text-decoration-none">Home</a></li>
+              <li><a href="{{ url_for('packages') }}" class="text-white text-decoration-none">Packages</a></li>
+              <li><a href="{{ url_for('about') }}" class="text-white text-decoration-none">About</a></li>
+              <li><a href="{{ url_for('contact') }}" class="text-white text-decoration-none">Contact</a></li>
+            </ul>
+            <h5>Our Partners</h5>
+            <ul class="list-unstyled">
+              <li><a href="https://langatvic.github.io/HospitalProject/" class="text-white text-decoration-none" target =" _blank"><strong>Medicare</strong></a></li>
+              <li><a href="https://open.spotify.com/" class="text-white text-decoration-none" target =" _blank"><strong>Spotify Music</strong></a></li>
+              <li><a href="https://www.dhl.com/us-en/home.html" class="text-white text-decoration-none" target =" _blank"><strong>DHL logistics</strong></a></li>
+              <li><a href="https://auto-xpress.co.ke/" class="text-white text-decoration-none" target =" _blank"><strong>Auto-xpress</strong> </a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p>Email: info@tausi.co.ke</p>
+            <p>Phone: +254 712 345678</p>
+            <div>
+              <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+            </div>
           </div>
         </div>
+        <hr class="border-white">
+        <p class="text-center mb-0">© {{ year }} Tausi Travels and Tours. All rights reserved.</p>
       </div>
+    </footer>
 
-      <!-- Blog Post 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="../static/media/logo-removebg.png" class="card-img-top" alt="Blog Post">
-          <div class="card-body">
-            <h5 class="card-title">Why Travel with Tausi?</h5>
-            <p class="card-text">We blend luxury, culture, and comfort to create truly unforgettable journeys.</p>
-            <button class="btn btn-sm text-white" style="background-color: #20c997;" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 <!-- Modal for Blog 1 -->
 <div class="modal fade" id="blogModal1" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -140,6 +189,7 @@
     </div>
   </div>
 </div>
+
 <!-- Modal for Blog 2 -->
 <div class="modal fade" id="blogModal2" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -182,6 +232,7 @@
     </div>
   </div>
 </div>
+
 <!-- Modal for Blog 3 -->
 <div class="modal fade" id="blogModal3" tabindex="-1">
   <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -215,5 +266,6 @@
     </div>
   </div>
 </div>
+
 </body>
 </html>

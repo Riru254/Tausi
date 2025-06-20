@@ -11,9 +11,9 @@ app.secret_key = 'secret123'
 #bookings = db["tausibookings"] #Use collection specified
 
 
-@app.route('/index')
+@app.route('/welcome')
 def index():
-    return render_template('index.html')
+    return render_template('welcome.html')
 
 @app.route('/about')
 def about():
