@@ -10,6 +10,10 @@ app.secret_key = 'secret123'
 #db = client["tausit&t"] #Use the database specified
 #bookings = db["tausibookings"] #Use collection specified
 
+@app.route('/')
+def home():
+    return render_template('welcome.html')
+
 
 @app.route('/welcome')
 def index():
